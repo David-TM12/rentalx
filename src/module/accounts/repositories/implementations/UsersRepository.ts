@@ -18,6 +18,7 @@ class UsersRepository implements IUsersRepository {
       driver_license, 
       password
     }: ICreateUserDTO): Promise<void> {
+      
       const user = this.repository.create({
         name, 
         email, driver_license, 
@@ -25,6 +26,11 @@ class UsersRepository implements IUsersRepository {
       });
 
       await this.repository.save(user);
+    }
+
+    async findByEmail(email: string): Promise<User> {
+      const user = this.repository.findOne({ email });
+      return user;
     }
 
 }
