@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import { CreateUserController } from "../module/accounts/useCases/CreateUser/CreateUserController";
 
 const usersRoutes = Router();
