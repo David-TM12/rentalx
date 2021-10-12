@@ -10,7 +10,7 @@ interface IRequest{
 class UpdateUserAvatarUseCase {
 
     constructor(
-        @inject("UserRepository")
+        @inject("UsersRepository")
         private userRepository: IUsersRepository    
     ){}
 
